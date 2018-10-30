@@ -26,13 +26,22 @@ img {
 .content {
   width: 1720px;
   background: @bg_content;
-  display: flex;
-  flex-direction: column;
+  &_box {
+    width: 400px;
+    //height: 100vh;
+    //overflow: hidden;
+    //display: flex;
+    //align-items: center;
+    img {
+      //width: 1720px;
+      //height: 100%;
+    }
+  }
 }
 
 .b-f {
   display: flex;
-  //height: 100%;
+  height: 100vh;
 }
 
 .logo {
@@ -85,13 +94,12 @@ img {
 
 .ratio {
   position: relative;
-  //width: 100%;
+  width: 100%;
   &_4-3 {
-    padding-top: 75%;
+    padding-top: 56%;
     height: 0;
   }
   &_content {
-    //background: coral;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -100,13 +108,11 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    //overflow: hidden;
   }
 }
 
 .navbar {
   display: flex;
-  margin-top: auto;
   margin-bottom: 40px;
   justify-content: center;
   &_btn {
@@ -134,17 +140,25 @@ img {
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
+    width: 300px;
   }
   &_crumb {
     display: inline-block;
     width: 34px;
+    min-width: 34px;
     height: 34px;
+    min-height: 34px;
     border-radius: 50%;
     line-height: 34px;
     text-align: center;
     font-size: 15px;
     color: @color;
     cursor: pointer;
+    a {
+      color: inherit;
+      text-decoration: inherit;
+      text-decoration: inherit;
+    }
     &:hover {
       background: @crubs_hover;
       font-weight: bold;
