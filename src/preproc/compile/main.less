@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  background: #f5f5f5;
 }
 
 img {
@@ -14,48 +15,48 @@ img {
 
 .wrapper {
   .wrapper();
+  margin: 0 auto;
 }
 
 .menu {
-  width: 200px;
+  width: 260px;
   display: flex;
+  height: 100vh;
+  max-height: 1080px;
   flex-direction: column;
-  flex-wrap: wrap;
+  background: @bg_menu;
 }
 
 .content {
-  //width: 1720px;
-  background: @bg_content;
-  &_box {
-    //width: 1024px;
-    //height: 100%;
-  }
+  background: #f5f5f5;
+  position: relative;
 }
 
 .b-f {
   display: flex;
-  height: 100vh;
 }
 
 .logo {
-  width: 200px;
+  width: 260px;
   padding: 32px;
   box-sizing: border-box;
 }
 
 .nav {
+  width: 260px;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow-y: scroll;
   &_item {
     font-weight: normal;
-    font-size: 12px;
+    font-size: 18px;
     text-transform: uppercase;
     color: @color;
     letter-spacing: 1px;
     border-bottom: 1px solid @bg_content;
     border-top: 1px solid transparent;
-    padding: 15px 0 15px 32px;
+    padding: 23px 0 23px 32px;
     box-sizing: border-box;
     cursor: pointer;
     &:first-child {
@@ -63,14 +64,14 @@ img {
     }
     &:hover {
       font-weight: bold;
-      color: @color_hover;
+      color: @bg_menu;
+      background: @bg_btn_up;
     }
   }
 }
 
 .btn_back {
   width: 156px;
-  //height: 55px;
   border-radius: 4px;
   background: @bg_btn_up;
   color: @bg_menu;
@@ -81,82 +82,14 @@ img {
   letter-spacing: 0.4px;
   text-transform: uppercase;
   cursor: pointer;
-  margin: auto auto 40px auto;
-
-}
-
-.ratio {
-  position: relative;
-  width: 100%;
-  &_4-3 {
-    padding-top: 56%;
-    height: 0;
+  &:hover {
+    color: @bg_menu;
+    background: @bg_btn_up;
   }
-  &_content {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.navbar {
-  display: flex;
-  margin-bottom: 40px;
-  justify-content: center;
-  &_btn {
-    width: 50px;
-    height: 60px;
-    background: @bg_menu;
-    text-align: center;
-    line-height: 60px;
-    cursor: pointer;
-    &_left {
-      border-bottom-left-radius: 4px;
-      border-top-left-radius: 4px;
-    }
-    &_right {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-    }
-  }
-  &_crumbs {
-    background: @bg_menu;
-    margin-left: 2px;
-    margin-right: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 300px;
-  }
-  &_crumb {
-    display: inline-block;
-    width: 34px;
-    min-width: 34px;
-    height: 34px;
-    min-height: 34px;
-    border-radius: 50%;
-    line-height: 34px;
-    text-align: center;
-    font-size: 15px;
-    color: @color;
-    cursor: pointer;
-    a {
-      color: inherit;
-      text-decoration: inherit;
-      text-decoration: inherit;
-    }
-    &:hover {
-      background: @crubs_hover;
-      font-weight: bold;
-      color: @color_hover;
-    }
+  &_block {
+    height: 80px;
+    margin: auto auto 40px auto;
+    padding-top: 25px;
   }
 }
 
@@ -178,14 +111,15 @@ img {
 
 .box {
   width: 100%;
-  //background: coral;
   margin: 25px auto;
 }
 
 .img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  &_main {
+    height: 100vh;
+    margin: 0 auto;
+  }
 }
 
 .bx-controls {
@@ -258,11 +192,21 @@ img {
 }
 
 .bx-wrapper {
-  position: relative;
 }
 
 .active {
   background: @crubs_hover;
   font-weight: bold;
   color: @color_hover;
+}
+
+.offset {
+  &_m_t {
+    &_84 {
+      margin-top: 84px;
+    }
+  }
+}
+.block_center {
+  margin: 0 auto;
 }

@@ -1,0 +1,84 @@
+body{
+  background: gray;
+  margin: 0;
+}
+
+.block {
+  height: 100vh;
+  width: calc(100vh * 1.333px);
+  background: coral;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+  &_btn {
+    width: 50px;
+    height: 60px;
+    background: @bg_menu;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    &_left {
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+    &_right {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+  &_crumbs {
+    background: @bg_menu;
+    margin-left: 2px;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 300px;
+  }
+  &_crumb {
+    display: inline-block;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+    border-radius: 50%;
+    line-height: 34px;
+    text-align: center;
+    font-size: 15px;
+    color: @color;
+    cursor: pointer;
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+    &:hover {
+      background: @crubs_hover;
+      font-weight: bold;
+      color: @color_hover;
+    }
+  }
+}
+.ratio {
+  position: relative;
+  width: 100%;
+  &_4-3 {
+    padding-top: 75%;
+    height: 0;
+  }
+  &_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
