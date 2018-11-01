@@ -1,9 +1,20 @@
 $(document).ready(function () {
     $('.slider').bxSlider({
-        pagerType: 'full',
+        pagerType: 'short',
         nextText: '<span class="arrow right"></span>',
-        prevText: '<span class="arrow left"></span>'
+        prevText: '<span class="arrow left"></span>',
+        pagerShortSeparator: ' из '
     });
 
-    $(".bx-controls").css({"margin-left": "-" + $(".bx-controls").width() / 2 + "px"});
+    showNav();
+
+    function showNav() {
+        var item = $(".bx-controls")
+        item.css({"margin-left": "-" + item.width() / 2 + "px"});
+        if ($(".slider").width() === 0) {
+            item.css({
+                display: "none"
+            });
+        }
+    }
 });

@@ -12,6 +12,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .wrapper {
   .wrapper();
@@ -19,12 +23,17 @@ img {
 }
 
 .menu {
-  width: 260px;
   display: flex;
   height: 100vh;
   max-height: 1080px;
   flex-direction: column;
   background: @bg_menu;
+  &_main {
+    width: 260px;
+  }
+  &_rc {
+    width: 200px;
+  }
 }
 
 .content {
@@ -37,18 +46,23 @@ img {
 }
 
 .logo {
-  width: 260px;
+  max-width: 260px;
   padding: 32px;
   box-sizing: border-box;
 }
 
 .nav {
-  width: 260px;
+  max-width: 260px;
   margin: 0;
   padding: 0;
   list-style: none;
   overflow-y: scroll;
+  &_rc {
+    width: 200px;
+  }
   &_item {
+    width: 100%;
+    display: inline-block;
     font-weight: normal;
     font-size: 18px;
     text-transform: uppercase;
@@ -59,6 +73,10 @@ img {
     padding: 23px 0 23px 32px;
     box-sizing: border-box;
     cursor: pointer;
+    &_rc {
+      font-size: 12px;
+      padding: 15px 0 15px 33px;
+    }
     &:first-child {
       border-top: 1px solid @bg_content;
     }
@@ -67,14 +85,21 @@ img {
       color: @bg_menu;
       background: @bg_btn_up;
     }
+    &_active {
+      font-weight: bold;
+      color: @bg_menu;
+      background: @bg_btn_up;
+    }
   }
 }
 
 .btn_back {
+  display: block;
   width: 156px;
   border-radius: 4px;
-  background: @bg_btn_up;
-  color: @bg_menu;
+  border: 2px solid @bg_btn_up;
+  background: @bg_menu;
+  color: @bg_btn_up;
   line-height: 55px;
   text-align: center;
   font-size: 11px;
@@ -82,6 +107,9 @@ img {
   letter-spacing: 0.4px;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: color .2s, background .2s;
   &:hover {
     color: @bg_menu;
     background: @bg_btn_up;
@@ -121,10 +149,12 @@ img {
     margin: 0 auto;
   }
 }
-
+.slider {
+  //min-width: 600px;
+}
 .bx-controls {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 50%;
 }
 
@@ -157,7 +187,7 @@ img {
 
 .bx-pager {
   display: flex;
-  padding: 0 50px;
+  padding: 0 25px;
   height: 60px;
   background: #fff;
   margin-left: 52px;
@@ -165,7 +195,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  font-weight: normal;
+  width: 150px;
+  box-sizing: border-box;
 }
 
 .bx-pager-item {
@@ -192,6 +224,7 @@ img {
 }
 
 .bx-wrapper {
+  transform: scale(1) translateX(-1px);
 }
 
 .active {
@@ -209,4 +242,12 @@ img {
 }
 .block_center {
   margin: 0 auto;
+}
+.km_fixed {
+  width: 247px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: 350px;
+  margin-bottom: 30px;
 }
