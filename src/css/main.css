@@ -373,8 +373,6 @@ a {
   background: white;
   padding: 25px 45px;
   border-radius: 5px;
-  overflow: hidden;
-  overflow-y: scroll;
 }
 
 .modal-form_row {
