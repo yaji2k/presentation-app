@@ -5,7 +5,8 @@
     <title>Сайт презентация</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -52,18 +53,28 @@
 <div class="bg_active_menu"></div>
 <div class="modal-form">
     <div class="modal-form_box">
+        <div class="modal-form_close-block"><span class="modal-form_close">закрыть</span></div>
         <form>
             <div class="modal-form_cont">
-                <div class="modal-form_close-block"><span class="modal-form_close">закрыть</span></div>
                 <div class="modal-form_row"><p class="modal-form_title">Закакзать звонок</p></div>
                 <div class="modal-form_row"><input class="modal-form_input" type="text" name="name"></div>
-                <div class="modal-form_row"><input class="modal-form_input" type="tel" class="phonemask" name="Phone"></div>
-                <div class="modal-form_row modal-form_agree"><input class="modal-form_checkbox" type="checkbox"><span class="modal-form_text">Согласен на обработку персональных данных</span></div>
+                <div class="modal-form_row"><input class="modal-form_input" type="tel" class="phonemask" name="Phone">
+                </div>
+                <div class="modal-form_row modal-form_agree"><input class="modal-form_checkbox" type="checkbox"><span
+                        class="modal-form_text">Согласен на обработку персональных данных</span></div>
                 <div class="modal-form_row">
                     <button class="modal-form_submit btn-submit">отправить</button>
                 </div>
             </div>
         </form>
+        <div class="result">
+            <div class="done">
+                Заявка принята!
+            </div>
+            <div class="fail">
+                Упс! Что-то пошло не так!
+            </div>
+        </div>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

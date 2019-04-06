@@ -369,6 +369,8 @@ a {
     //max-width: 200px;
     padding: 25px 45px;
     border-radius: 5px;
+    overflow: hidden;
+     overflow-y: scroll;
   }
   &_row {
     width: 100%;
@@ -398,6 +400,8 @@ a {
   &_agree {
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   &_submit {
     width: 100%;
@@ -430,6 +434,17 @@ a {
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+}
+.result {
+  margin-top: 25px;
+  position: relative;
+  height: 19px;
+}
+.done,.fail {
+  position: absolute;
+  top: 0;
+  font-weight: bold;
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -566,5 +581,22 @@ a {
     margin-right: 8px;
     font-size: 8px;
     font-weight: bold;
+  }
+  .modal-form {
+    &_box {
+      padding: 20px 45px;
+    }
+    &_input {
+      font-size: 12px;
+      padding: 10px;
+    }
+    &_submit {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+  .result {
+    margin-top: 18px ;
+    height: 15px;
   }
 }
