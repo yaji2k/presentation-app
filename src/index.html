@@ -11,7 +11,13 @@
 <body>
 <div class="wrapper">
     <header class="header">
-
+        <div class="menu_btn"><i class="fas fa-bars buter"></i></div>
+        <a href="http://kvartimall.ru" class="logo-box"><img src="./img/logo_kvml.png" alt="kvartimall"></a>
+        <a class="call-phone" href="tel: +78432157157">+7 (843) 2-157-157</a>
+        <div class="btn-phone">
+            <i class="fas fa-phone phone"></i>
+            <span class="btn-phone_text">заказать звонок</span>
+        </div>
     </header>
     <div class="b-f">
         <div class="menu menu_rc">
@@ -44,7 +50,22 @@
     </div>
 </div>
 <div class="bg_active_menu"></div>
-<div class="menu_btn"><i class="fas fa-bars buter"></i></div>
+<div class="modal-form">
+    <div class="modal-form_box">
+        <form>
+            <div class="modal-form_cont">
+                <div class="modal-form_close-block"><span class="modal-form_close">закрыть</span></div>
+                <div class="modal-form_row"><p class="modal-form_title">Закакзать звонок</p></div>
+                <div class="modal-form_row"><input class="modal-form_input" type="text" name="name"></div>
+                <div class="modal-form_row"><input class="modal-form_input" type="tel" class="phonemask" name="Phone"></div>
+                <div class="modal-form_row modal-form_agree"><input class="modal-form_checkbox" type="checkbox"><span class="modal-form_text">Согласен на обработку персональных данных</span></div>
+                <div class="modal-form_row">
+                    <button class="modal-form_submit btn-submit">отправить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="./js/scripts.js"></script>

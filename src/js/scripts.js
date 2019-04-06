@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.onload = function () {
     _width = $(window).innerWidth();
     _breakPoint = 800;
     $('.slider').bxSlider({
@@ -10,6 +10,14 @@ $(document).ready(function () {
 
     showNav();
     menuSwitch();
+
+    $(".btn-phone").on("click", function () {
+        $(".modal-form").css({"display": "flex"});
+    });
+    $(".modal-form_close").on("click", function () {
+        $(".modal-form").css({"display": "none"});
+    });
+
     $(window).on("resize", function () {
         _width = window.event.target.innerWidth;
         if(_width > _breakPoint) {
@@ -46,4 +54,4 @@ $(document).ready(function () {
             }
         });
     }
-});
+};
